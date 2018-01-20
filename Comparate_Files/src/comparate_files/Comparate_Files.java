@@ -48,6 +48,28 @@ public class Comparate_Files {
             while ((sCurrentLine = br2.readLine()) != null) {
                 list2.add(sCurrentLine);
             }
+            
+            //Se declara un ArrayList tipo Strinng  que va ser igual a la list1
+            List<String> tmpList = new ArrayList<String>(list1);
+            tmpList.removeAll(list2);//Con el metodo removeAll se va a eliminar todo lo que contenga list2 en la list1
+            System.out.println("content from volantes_tramite.txtt which is not there in volantes_firmados.txt");
+            
+            for(int i=0;i<tmpList.size();i++){
+                cont++;
+                System.out.println(tmpList.get(i)); //content from test.txt which is not there in test2.txt
+                 //content from test.txt which is not there in test2.txt
+            }
+            System.out.println("Total de numeros faltantes: "+cont);
+            System.out.println("content from test2.txt which is not there in test.txt");
+
+//            tmpList = list2;
+//            tmpList.removeAll(list1);
+//            for(int i=0;i<tmpList.size();i++){
+//                
+//                System.out.println(tmpList.get(i)); //content from test2.txt which is not there in test.txt
+           
+//            }
+
     }
     
 }
