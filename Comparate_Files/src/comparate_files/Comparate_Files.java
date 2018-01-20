@@ -38,6 +38,16 @@ public class Comparate_Files {
           // Primera forma de declarar una variable de tipo BufferedReader      
             br1 = new BufferedReader(new FileReader(filename));
             br2 = new BufferedReader(new FileReader(filename2));
+            
+            //Lo que tenga el file 1 va ser igual a sCurrentLine
+            while ((sCurrentLine = br1.readLine()) != null) {
+                list1.add(sCurrentLine);
+            }
+            
+           // Lo que tenga el file 2 va ser igual a sCurrentLine
+            while ((sCurrentLine = br2.readLine()) != null) {
+                list2.add(sCurrentLine);
+            }
     }
     
 }
